@@ -1,0 +1,166 @@
+*{
+padding:0;
+margin:0;
+box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+li{
+    list-style: none;
+}
+#menu{
+    border: solid red 2px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+button{
+    border: none;
+}
+body{
+    padding-inline: 5em;
+    font-family: "DM Sans", sans-serif;
+}
+#menu-ham{
+    display: none;
+}
+.icono-menu{
+    display: none;
+}
+#menu ul{
+    width: 40%;
+    border: solid blue 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn{
+    background-color: #664EFC;
+    width: 100%;
+    padding: 1em;
+    color: white;
+    border-radius: 2px 0 0 0;
+
+}
+#banner{
+    display: flex;
+    border: solid blue 2px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#sc1{
+    display: flex !important;
+    border: solid blue 2px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#sc2{
+    display: flex !important;
+    border: solid green 2px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.izq-sc1{
+    width: 100%;
+}
+.der-sc1{
+    width: 100%;
+}
+.izq-sc2{
+    width: 100%;
+}
+.der-sc2{
+    width: 100%;
+}
+.izq-banner{
+    flex: 40%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1em;
+   
+}
+.izq-banner .btn{
+    width: 50%;
+}
+.der-banner{
+    width: 100%;
+    flex: 60%;
+}
+.der-banner img{
+    width: 100%;
+}
+p{
+    font-size: 1rem;
+}
+h1{
+    font-size: 2.618rem;
+}
+h2{
+    font-size: 1.618rem;
+}
+#pie{
+    display: flex;
+    gap: 8em;
+}
+.izq-pie{
+    flex:30%;
+}
+.der-pie{
+    flex:70%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}/*celular*/
+@media only screen and (min-width: 300px) and (max-width:740px) {
+    body{
+        padding-inline: 1em;
+    }
+    .icono-menu{
+        display: block;
+    }
+    #menu-ham:checked ~.menuham{
+        display: block;
+        position: absolute;
+        top: 28px;
+        right: 0;
+        background-color: aliceblue;
+        
+    }
+    #banner, #sc1, #sc2{
+        flex-direction: column-reverse;
+    }
+    #pie{
+        flex-direction: column;
+        gap: 2em;
+    }
+    .der-pie{
+        grid-template-columns: 1fr 1fr;
+    }
+  }
+  /*tablet*/
+@media only screen and (min-width: 300px) and (max-width:740px) {
+    body{
+        padding-inline: 1em;
+    }
+    #banner{
+        flex-direction: column-reverse;
+    }
+    #pie{
+        flex-direction: column;
+        gap: 2em;
+    }
+    #sc1, #sc2{
+        display: flex !important
+    }
+  }
